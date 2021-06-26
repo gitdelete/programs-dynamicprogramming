@@ -3,14 +3,14 @@ package com.aman.dynamic;
 
 
 /*
-*               0   1   2   3   4   5
-*           0   0   0   0   0   0   0
-* 4   1     1   0   4   4   4   4   4
-* 3   2     2   0   4   4   7   7   7
-* 7   3     3   0   4   4   7   11  11
-* 6   5     4   0   4   4   7   11  11
+*                 0   1   2   3   4   5
+* pro  wts    0   0   0   0   0   0   0
+*  4   1      1   0   4   4   4   4   4
+*  3   2      2   0   4   4   7   7   7
+*  7   3      3   0   4   4   7   11  11
+*  6   5      4   0   4   4   7   11  11
 *
-*     backtrack to find the weights selected
+*  backtrack to find the weights selected
 *
 *
  */
@@ -18,16 +18,17 @@ public class KnapsackProblem {
 
     public static void main(String[] args) {
 
+        // Weights need not to be sorted
         int[] weights = {1, 2, 3, 5};
         int[] values = {4, 3, 7, 6};
 
         int maxCapacity = 5;
-        
-        findMaxProfit(weights, values, maxCapacity);
 
+        int[][] K= findMaxProfit(weights, values, maxCapacity);
+        printSolution(K,maxCapacity, weights);
     }
 
-    private static int findMaxProfit(int[] weights, int[] values, int maxCapacity) {
+    private static int[][] findMaxProfit(int[] weights, int[] values, int maxCapacity) {
 
         int[][] K = new int[weights.length+1][maxCapacity+1];
         int i,w=0;
@@ -47,8 +48,18 @@ public class KnapsackProblem {
 
         }
 
-        System.out.print(K[weights.length][maxCapacity]);
-        return 1;
+       // System.out.print(K[weights.length][maxCapacity]);
+        return K;
+    }
+
+    static void printSolution(int K[][], int capacity, int[] weights)
+    {
+        for (int i = 0; i <= weights.length; i++) {
+            for (int j = 0; j <= capacity; j++)
+                System.out.print(" " + K[i][j]
+                        + " ");
+            System.out.println();
+        }
     }
 
 }

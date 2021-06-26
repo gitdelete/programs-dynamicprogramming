@@ -28,8 +28,8 @@ public class LongestCommonSubstring {
         {
             for (int j = 0; j <= n; j++)
             {
-                if (i == 0 || j == 0)                       //String X = "OldSite:GeeksforGeeks.org";
-                                                            // String Y = "NewSite:GeeksQuiz.com";
+                if (i == 0 || j == 0)                       //String X = "AmanjotSinghDhingra";
+                                                            // String Y = "HarmanjotSinghDhingra";
                     LCStuff[i][j] = 0;
                 else if (X[i - 1] == Y[j - 1])
                 {
@@ -61,8 +61,8 @@ public class LongestCommonSubstring {
     // Driver Code
     public static void main(String[] args)
     {
-        String X = "OldSite:GeeksforGeeks.org";
-        String Y = "NewSite:GeeksQuiz.com";
+        String X = "AmanjotSinghDhingra";
+        String Y = "HarmanjotSinghDhingRa";
 
         int m = X.length();
         int n = Y.length();

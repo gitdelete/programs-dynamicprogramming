@@ -5,8 +5,6 @@ public class NumberOfPalindrome {
     public static void main(String[] args) {
 
 
-
-
     }
 
 }
