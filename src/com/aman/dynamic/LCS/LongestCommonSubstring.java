@@ -1,4 +1,4 @@
-package com.aman.dynamic;
+package com.aman.dynamic.LCS;
 
 public class LongestCommonSubstring {
 

@@ -14,6 +14,7 @@ package com.aman.dynamic;
 *
 *
  */
+//Bounded 0-1 knapsack
 public class KnapsackProblem {
 
     public static void main(String[] args) {
@@ -39,7 +40,7 @@ public class KnapsackProblem {
                 if(i==0 || w==0)
                     K[i][w]=0;
 
-                else if(weights[i - 1]<= w)
+                else if(weights[i - 1] <= w)
                     K[i][w] = Math.max(K[i-1][w], (values[i-1]+K[i-1][w-weights[i-1]]));
                 else
                     K[i][w] = K[i - 1][w];

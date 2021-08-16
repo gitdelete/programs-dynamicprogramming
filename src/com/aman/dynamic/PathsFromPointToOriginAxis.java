@@ -1,6 +1,6 @@
 package com.aman.dynamic;
 
-public class PathsFromPointToOrigin {
+public class PathsFromPointToOriginAxis {
      
     static int[][] countPaths(int n, int m)
     {
@@ -19,12 +19,12 @@ public class PathsFromPointToOrigin {
         return dp;
     }
 
-    private static int countPathsRecusively(int[][] dp, int n, int m) {
+    private static int countPathsRecusively(int n, int m) {
 
         if(m ==0 || n == 0)
             return 1;
 
-        return countPathsRecusively(dp,n-1,m) +countPathsRecusively(dp, n, m-1);
+        return countPathsRecusively(n-1,m) +countPathsRecusively(n, m-1);
     }
 
     static void printSolution(int K[][], int n, int m)
@@ -38,13 +38,13 @@ public class PathsFromPointToOrigin {
     }
      
     public static void main (String[] args) {
-        int n = 3, m = 2;
+        int n = 2, m = 2;
         int dp[][]=countPaths(n, m);
         printSolution(dp, n, m);
 
 
         System.out.println("With recursion");
-        int countPaths=countPathsRecusively(dp,n,m);
+        int countPaths=countPathsRecusively(n,m);
         System.out.println(countPaths);
     }
 
