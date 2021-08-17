@@ -1,4 +1,4 @@
-package com.aman.dynamic.SlidingWindow;
+package com.aman.dynamic.SlidingWindow.fixed;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

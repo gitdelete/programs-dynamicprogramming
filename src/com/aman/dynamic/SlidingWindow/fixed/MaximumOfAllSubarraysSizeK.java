@@ -1,4 +1,4 @@
-package com.aman.dynamic.SlidingWindow;
+package com.aman.dynamic.SlidingWindow.fixed;
 
 import java.util.Deque;
 import java.util.LinkedList;
