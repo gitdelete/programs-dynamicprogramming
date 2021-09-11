@@ -21,12 +21,16 @@ public class OddEvenLinkedList {
         head.next.next.next = new Node(42);
         head.next.next.next.next = new Node(15);
 
-        oddEvenSeperate(head);
+
+        head=oddEvenSeperate(head);
+
         printList(head);
 
     }
 
-    private static void oddEvenSeperate(Node head) {
+
+    private static Node oddEvenSeperate(Node head) {
+        Node start=head;
         Node end= head;
         Node node = head;
         Node prev = null;
@@ -38,24 +42,28 @@ public class OddEvenLinkedList {
         Node new_end=end;
         while (node != end) {
             if (node.data % 2 == 0) {
-                if (node == head) {
+                if (node == start) {
+                    start=start.next;
+
                     new_end.next=node;
-                    new_end.next.next=null;
                     new_end=new_end.next;
                     node=node.next;
-                    head=node;
+                    new_end.next=null;
                 }else {
-                    new_end.next=node;
-                    new_end.next.next=null;
-                    new_end=new_end.next;
                     prev.next=node.next;
+                    new_end.next=node;
+                    new_end=new_end.next;
                     node=node.next;
+                    new_end.next=null;
                 }
             }else {
                 prev=node;
                 node=node.next;
             }
         }
+
+        printList(start);
+        return start;
     }
 
     static void printList(Node head)
