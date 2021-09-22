@@ -51,6 +51,7 @@ public class JumpGameDP {
         return -1;
     }
 
+
     private static int minJumps(int[] arr) {
 
         if(arr.length<=1){
