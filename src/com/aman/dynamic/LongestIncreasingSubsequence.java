@@ -29,7 +29,7 @@ public class LongestIncreasingSubsequence {
                 System.out.println(i+"  "+max);
             }
         }
-
+        System.out.println("Final ----  "+max);
     }
 
 

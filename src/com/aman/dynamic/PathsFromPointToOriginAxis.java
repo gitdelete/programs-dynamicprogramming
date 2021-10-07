@@ -38,7 +38,7 @@ public class PathsFromPointToOriginAxis {
     }
      
     public static void main (String[] args) {
-        int n = 2, m = 2;
+        int n = 6, m = 2;
         int dp[][]=countPaths(n, m);
         printSolution(dp, n, m);
 
