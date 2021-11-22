@@ -19,22 +19,30 @@ public class DiceRoll {
             System.out.print(check[i]+"  ");
         }
 
-        System.out.println("===================");
+        System.out.println("\n===================");
 
         for(int i=0; i< check1.length;i++){
             System.out.print(check1[i]+"  ");
         }
 
-        System.out.println("===================");
+        System.out.println("\n===================");
 
         for(int i=0; i< check2.length;i++){
             System.out.print(check2[i]+"  ");
         }
 
-        System.out.println("===================");
+        System.out.println("\n===================");
 
         for(int i=0; i< check3.length;i++){
             System.out.print(check3[i]+"  ");
+        }
+
+        int[] arr4= {5};
+        int[] check4=solution(arr4,1, 6);
+        System.out.println("\n===================");
+
+        for(int i=0; i< check4.length;i++){
+            System.out.print(check4[i]+"  ");
         }
     }
 
@@ -54,9 +62,7 @@ public class DiceRoll {
             return invalid;
         }
 
-            double check = Double.valueOf(forgotTotal)/F;
-
-        System.out.println("float"+check);
+        double check = Double.valueOf(forgotTotal)/F;
 
         if(check > 6){
             return invalid;
