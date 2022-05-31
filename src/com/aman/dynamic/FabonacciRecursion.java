@@ -13,7 +13,7 @@ public class FabonacciRecursion {
     private static void fabonacci(int m, int n) {
             System.out.println(n);
             count++;
-            while(count <= maxCount)
+            if(count <= maxCount)
                 fabonacci(n,m+n);
     }
 
