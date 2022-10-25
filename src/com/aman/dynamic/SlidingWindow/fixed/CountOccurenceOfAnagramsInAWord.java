@@ -10,11 +10,11 @@ public class CountOccurenceOfAnagramsInAWord {
 
         String word="sausidaisuudsdusidsidsiuiadiusuids";
         String ana="isu";
-        countOccurence(word, ana);
+        countOccurrence(word, ana);
 
     }
 
-    private static void countOccurence(String word, String ana) {
+    private static void countOccurrence(String word, String ana) {
 
         int characters = 256;
         int[] wordArray= new int[characters];

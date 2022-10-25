@@ -12,7 +12,7 @@ public class FindDuplicatesInArray {
         findDuplicateUsingAbsolute(arr); // Takes only O(1) space
     }
     private static void findDuplicateUsingMap(int[] arr) {
-
+        System.out.println("Using Map !!");
         Map<Integer,Integer> hashMap = new HashMap();
 
         for (int i= 0; i<arr.length; i++){
@@ -27,7 +27,7 @@ public class FindDuplicatesInArray {
     }
 
     private static void findDuplicateUsingAbsolute(int[] arr) {
-
+        System.out.println("Using Absolute !!");
         for (int i= 0; i<arr.length; i++){
 
             int x= Math.abs(arr[i]);

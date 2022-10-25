@@ -29,16 +29,16 @@ public class LongestCommonSubstring {
             }
         }
 
-        printSolution(LCStuff,m,n);
+
 
         return result;
     }
 
-    static void printSolution(int queens[][], int m, int n)
+    static void printSolution(int LCStuff[][], int m, int n)
     {
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++)
-                System.out.print(" " + queens[i][j]
+                System.out.print(" " + LCStuff[i][j]
                         + " ");
             System.out.println();
         }

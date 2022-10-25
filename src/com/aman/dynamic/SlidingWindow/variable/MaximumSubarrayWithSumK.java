@@ -17,6 +17,7 @@ public class MaximumSubarrayWithSumK {
 
         int sum=0;
         Map<Integer,Integer> sumMap = new HashMap<>();
+        sumMap.putIfAbsent(0,-1);
         for(int i=0; i<arr.length; i++){
             sum=sum+arr[i];
             sumMap.putIfAbsent(sum,i);

@@ -33,12 +33,12 @@ public class FindMissingNumberInArray{
         for(int i = 1; i <arr.length; i++){
             arrayXOR=arrayXOR^arr[i];
         }
-
+        System.out.println(arrayXOR);
         int exactXOR=1;
         for(int i = 2; i <=arr.length+1; i++){
             exactXOR=exactXOR^i;
         }
-
+        System.out.println(exactXOR);
         System.out.println("Missing Number is "+(exactXOR^arrayXOR));
 
     }

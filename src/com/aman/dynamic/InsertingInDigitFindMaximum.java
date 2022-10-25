@@ -5,7 +5,7 @@ public class InsertingInDigitFindMaximum {
 
     public static void main(String[] args) {
 
-        int n= -333;
+        int n= 888;
         int num=5;
 
         String  a= String.valueOf(n);
@@ -13,7 +13,7 @@ public class InsertingInDigitFindMaximum {
         String newDigit ="";
 
         boolean negativeNum= false;
-
+        System.out.println(a);
         if(n<0){
             negativeNum= true;
         }
@@ -33,6 +33,13 @@ public class InsertingInDigitFindMaximum {
 
             newDigit += a.charAt(i);
 
+        }
+        if(!flagOnce && negativeNum){
+            newDigit += num;
+        }
+
+        if(!flagOnce && !negativeNum){
+            newDigit += num;
         }
 
         System.out.println(newDigit);

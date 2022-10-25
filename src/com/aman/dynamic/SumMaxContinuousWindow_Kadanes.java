@@ -19,8 +19,8 @@ public class SumMaxContinuousWindow_Kadanes {
                 sum=0;
             }
         }
-        System.out.println(maxSum);
-        System.out.println(endIndex);
+        System.out.println("Max Sum -- "+maxSum);
+        System.out.println("End Index -- "+ endIndex);
         int findStartIndex=maxSum;
         for(int a= endIndex ; a >= 0; a--){
             findStartIndex=findStartIndex-ar[a];
@@ -28,7 +28,7 @@ public class SumMaxContinuousWindow_Kadanes {
                 startIndex=a;
             }
         }
-        System.out.print(startIndex);
+        System.out.print("start index -- "+startIndex);
     }
 
 

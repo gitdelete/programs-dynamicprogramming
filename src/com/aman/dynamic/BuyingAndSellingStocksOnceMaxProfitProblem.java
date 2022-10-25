@@ -4,10 +4,10 @@ public class BuyingAndSellingStocksOnceMaxProfitProblem {
 
     public static void main(String[] args) {
 
-        int[] stocks = { 200, 300, -400, 500, 600, 100, 200, 700, -300, -100, 100 };
+        int[] stocks = { 2000, 300, -400, 900,-500, 600, 100, -700,-700,1200,200, 100, -300, -100, 100 };
 
         int minValue = stocks[0];
-        int buyIndex = 0,sellIndex=0;
+        int buyIndex = 0,sellIndex=0, newBuyIndex=0;
         int maxProfit= Integer.MIN_VALUE;
         for(int i = 0; i<stocks.length; i++){
             int profit= 0;
@@ -16,10 +16,11 @@ public class BuyingAndSellingStocksOnceMaxProfitProblem {
                 if(profit>maxProfit) {
                     maxProfit=profit;
                     sellIndex = i;
+                    buyIndex=newBuyIndex;
                 }
             }
             else {
-                buyIndex=i;
+                newBuyIndex=i;
                 minValue=stocks[i];
             }
         }

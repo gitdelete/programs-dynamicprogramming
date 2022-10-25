@@ -15,12 +15,12 @@ public class AmbigousMeasurements {
         int lowSum = 0,highSum=0, row=0;
         boolean b1 = measurement(measuringCups1,low1,high1, lowSum, highSum, row);
         System.out.println(b1);
+
         int[][] measuringCups2 = {
                 {1,3},
                 {2,4},
                 {5,6}
         };
-
         int low2=100;
         int high2=120;
         boolean b2 = measurement(measuringCups2,low2,high2, lowSum, highSum, row);
@@ -48,7 +48,6 @@ public class AmbigousMeasurements {
         if(measurement(measuringCups,low,high,lowSum,highSum,row+1)) {
             return true;
         }
-
 
         return false;
     }
