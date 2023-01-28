@@ -10,6 +10,11 @@ public class MaximumOfAllSubarraysSizeK
         int k = 3; // subarray fixed size
         int[] arr = {2,15,14,2,3,4,5,7,10,12,3,6,20,1,4,22};
         maxSumWindow(arr, k);
+
+        System.out.println("");
+        int k2 =4;
+        int[] arr2 = {16,14,15, 2,18,4,5,7,10,12,3,6,20,1,4,22};
+        maxSumWindow(arr2, k2);
     }
 
     private static void maxSumWindow(int[] arr, int k) {
@@ -18,12 +23,12 @@ public class MaximumOfAllSubarraysSizeK
         Deque<Integer>  maxList = new LinkedList<>();
 
         for (i=0; i<k; i++) {
-                while (!maxList.isEmpty() && arr[maxList.peek()] < arr[i]) {
+                while (!maxList.isEmpty() && arr[maxList.peekLast()] <= arr[i]) {
                     maxList.removeLast();
                 }
                 maxList.addLast(i);
         }
-        System.out.println(arr[maxList.peek()]);
+        System.out.print(arr[maxList.peek()]+" ");
         for (; i< arr.length; i++){
             while (!maxList.isEmpty() && maxList.peekFirst() <= i-k) {
                 maxList.removeFirst();
@@ -33,7 +38,7 @@ public class MaximumOfAllSubarraysSizeK
             }
             maxList.addLast(i);
 
-            System.out.println(arr[maxList.peek()]);
+            System.out.print(arr[maxList.peek()]+" ");
 
         }
 

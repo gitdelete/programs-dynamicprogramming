@@ -15,6 +15,9 @@ public class PathsFromPointToOriginAxis {
                     dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
                 }
             }
+
+
+
         }
         return dp;
     }
@@ -27,7 +30,8 @@ public class PathsFromPointToOriginAxis {
         return countPathsRecusively(n-1,m) +countPathsRecusively(n, m-1);
     }
 
-    static void printSolution(int K[][], int n, int m)
+    static void
+    printSolution(int K[][], int n, int m)
     {
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= m; j++)

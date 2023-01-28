@@ -85,7 +85,7 @@ public class DivideArrayIntoTwoWithMinimumSumDifference {
         int diff = Integer.MAX_VALUE;
 
         // Find the largest j such that dp[n][j]
-        // is true where j loops from sum/2 t0 0
+        // is true where j loops from sum/2 to 0
         for (int j = sum / 2; j >= 0; j--) {
             // Find the
             if (dp[n][j] == 1) {
