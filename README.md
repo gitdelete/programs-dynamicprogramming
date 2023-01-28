@@ -8,12 +8,14 @@ LCS:
 6. Min number of insertion to make string A to B
 
 Sliding Window (Fixed):
+
 7. Count Occurance Of Anagrams in a word
 8. First Negative number in Windows of fixed size K
 9. Fixed Subarray with maximum sum.
 10. Maximum of all subarrays of fixed size K.
 
 Sliding Window (Variable):
+
 11. Longest Substring with K Unique Characters.
 12. Longest Substring Without Repeating Characters.
 13. Maximum Subarray with sum k
@@ -70,7 +72,8 @@ Sliding Window (Variable):
 63. Print all the subset of array
 64. Buying and selling stocks (single and N) time/s 
 65. Count Frequencies Unsorted range from 1 to N in array.
-66.  
+66. 
+67.  
 
 
 
