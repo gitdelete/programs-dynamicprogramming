@@ -23,6 +23,9 @@ public class DivideArrayIntoTwoWithMinimumSumDifference {
 
         int[] arr3 = { 2, 3, 1, 4, 5 };
         System.out.println(findMin(arr3,arr3.length));
+
+        int[] arr4 = { 20,23,40,1};
+        System.out.println(findMin(arr4,arr4.length));
     }
 
     private static int getTotalSum(int[] arr) {
@@ -60,7 +63,7 @@ public class DivideArrayIntoTwoWithMinimumSumDifference {
         // sum except 0 is possible
         for (int i = 1; i <= sum; i++)
             dp[0][i] = 0;
-
+        int[] arr3 = { 2, 3, 1, 4, 5 };
         // Fill the partition table
         // in bottom up manner
         for (int i = 1; i <= n; i++) {
@@ -96,5 +99,4 @@ public class DivideArrayIntoTwoWithMinimumSumDifference {
         System.out.println();
         return diff;
     }
-
 }

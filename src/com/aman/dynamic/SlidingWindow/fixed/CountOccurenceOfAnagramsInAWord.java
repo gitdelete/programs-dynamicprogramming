@@ -8,8 +8,8 @@ public class CountOccurenceOfAnagramsInAWord {
 
     public static void main(String[] args) {
 
-        String word="sausidaisuudsdusidsidsiuiadiusuids";
-        String ana="isu";
+        String word="abcabefacbae";
+        String ana="abc";
         countOccurrence(word, ana);
 
     }

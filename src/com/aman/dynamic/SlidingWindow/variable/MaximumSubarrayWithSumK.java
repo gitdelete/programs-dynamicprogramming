@@ -10,6 +10,11 @@ public class MaximumSubarrayWithSumK {
         int[] arr= {2, 4, 1, -3, 10, -7, 4, 3, 7, 3, 2, 3, -1};
         int k= 7;
         maxSubarray(arr, k);
+        System.out.println("=========================");
+
+        int[] arr2= {0, 2, 4, 1, -3, -10, -7, 4, 3, 7, 3, 2, 3, -1};
+        int k2= 7;
+        maxSubarray(arr2, k2);
 
     }
 

@@ -55,7 +55,7 @@ public class LargestRectangularAreaInHistogram {
 
         s1.push(histogram.length-1);
         nearestSmallerToRight[histogram.length-1]=-1;
-        for(int i=histogram.length-2; i>0; i--){
+        for(int i=histogram.length-2; i>=0; i--){
             while(!s1.empty() && histogram[s1.peek()]>histogram[i]){
                 s1.pop();
             }
@@ -81,6 +81,7 @@ public class LargestRectangularAreaInHistogram {
             }
             else if(nearestSmallerToLeft[i] == -1){
                 area = (nearestSmallerToRight[i]-0)*histogram[i];
+//                System.out.println(area);
             }
             else if(nearestSmallerToRight[i] == -1){
                 area = (histogram.length-1-nearestSmallerToLeft[i])*histogram[i];
