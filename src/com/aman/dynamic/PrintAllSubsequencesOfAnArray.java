@@ -29,17 +29,17 @@ public class PrintAllSubsequencesOfAnArray {
     }
 
 
+    //Useful for subset sum problem as well
     private static void printAllSubsequencesIterativeBitMasking(int[] arr) {
 
         int subset_size = (int)Math.pow(2,arr.length);
 
         for(int i=0; i<subset_size; i++){
-
             for(int j=0; j<arr.length; j++){
-//                System.out.println("i "+i+" j "+j+" test1  "+(1 << j));
-//                System.out.println("i "+i+" j "+j+" test2  "+(i&(1 << j)));
+                System.out.println("i "+i+" j "+j+" test1  "+(1 << j));
+                System.out.println("i "+i+" j "+j+" test2  "+(i&(1 << j)));
                 if ((i & (1 << j)) != 0) {
-                    System.out.print(arr[j]+" ");
+                    System.out.print("cc -- "+arr[j]+" ");
                 }
             }
             System.out.println();

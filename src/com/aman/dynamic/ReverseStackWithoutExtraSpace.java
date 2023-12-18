@@ -1,8 +1,6 @@
 package com.aman.dynamic;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class ReverseStackWithoutExtraSpace {
 
@@ -17,10 +15,24 @@ public class ReverseStackWithoutExtraSpace {
         /*Reversing a queue is simple*/
         Queue<Integer> queue = new LinkedList();
         queue.add(1);queue.add(2);queue.add(3);queue.add(4);queue.add(5);
-        reverseQueue(queue);
         System.out.println(queue);
         reverseQueue(queue);
         System.out.println(queue);
+
+
+        List<Integer> list = new ArrayList<>();
+        list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+        System.out.println(list);
+        reverseList(list);
+        System.out.println(list);
+    }
+
+    private static void reverseList(List<Integer> list) {
+           if(!list.isEmpty()) {
+               int x = list.remove(0);
+               reverseList(list);
+               list.add(x);
+           }
     }
 
     private static void reverseStack(Stack<Integer> st) {

@@ -1,6 +1,9 @@
 package com.aman.dynamic;
 
-class MinimumCostPathMatrix
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class MinimumCostPathMatrix_RIGHT_DOWN_DIAGONAL
 {
     private static int min(int x, int y, int z)
     {
@@ -31,6 +34,13 @@ class MinimumCostPathMatrix
                 tc[i][j] = min(tc[i-1][j-1],
                                tc[i-1][j],
                                tc[i][j-1]) + cost[i][j];
+
+        for (i = 0; i <= m; i++ ){
+            for (j = 0; j <= n; j++) {
+                System.out.print(tc[i][j]+"  ");
+            }
+            System.out.println("  ");
+        }
  
         return tc[m][n];
     }
@@ -38,6 +48,7 @@ class MinimumCostPathMatrix
     /* Driver program to test above functions */
     public static void main(String args[])
     {
+
         int cost[][]= {{1, 2, 3},
                        {4, 8, 2},
                        {1, 5, 3}};

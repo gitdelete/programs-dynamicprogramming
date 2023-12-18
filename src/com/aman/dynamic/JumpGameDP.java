@@ -90,6 +90,7 @@ public class JumpGameDP {
             return true;
         }
 
+
         if(arr[i] == 0 && i<arr.length-1){
             return false;
         }

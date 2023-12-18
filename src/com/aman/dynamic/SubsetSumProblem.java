@@ -1,5 +1,11 @@
 package com.aman.dynamic;
 
+/*
+*
+*           can be done by bit manipulation
+*
+*              check solution at printAllSubsequencesIterativeBitMasking in printAllSubsequencesIterativeBitMasking
+* */
 public class SubsetSumProblem {
 
     public static void main(String[] args) {

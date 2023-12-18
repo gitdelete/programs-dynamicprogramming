@@ -31,7 +31,8 @@ public class MaximumRectangleInBinaryMatrix {
                     if(square[i][j]==0){
                         checkMatrix[i][j]=0;
                     }else if (square[i][j]==1){
-                        checkMatrix[i][j]=Math.max(Math.min(checkMatrix[i-1][j],checkMatrix[i][j-1]),checkMatrix[i-1][j-1])+1;
+                        //System.out.println(checkMatrix[i-1][j]+" "+checkMatrix[i][j-1]+" "+checkMatrix[i-1][j-1]);
+                        checkMatrix[i][j]=Math.min(Math.max(checkMatrix[i-1][j],checkMatrix[i][j-1]),checkMatrix[i-1][j-1])+1;
                     }
                 }
             }
@@ -52,6 +53,13 @@ public class MaximumRectangleInBinaryMatrix {
         System.out.println("col "+col);
         System.out.println("maxRect "+max);
 
+        for(int i=0; i<=m; i++){
+            System.out.println();
+            for(int j=0; j<=n; j++) {
+                System.out.print(checkMatrix[i][j]+" ");
+            }
+        }
+        System.out.println(" ============================ ");
         for(int i=row; i>row-max; i--){
             System.out.println();
             for(int j=col; j>col-max; j--) {
