@@ -56,6 +56,7 @@ public class FindAnagrams {
         // Driver program
         String arr[]
             = { "cat", "dog", "tac", "god", "act" };
+        System.out.println(2&1);
         printAnagrams(arr);
     }
 }

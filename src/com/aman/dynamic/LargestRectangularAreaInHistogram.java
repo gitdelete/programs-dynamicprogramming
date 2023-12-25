@@ -8,7 +8,7 @@ public class LargestRectangularAreaInHistogram {
     public static void main(String[] args) {
         int[] histogram1 = {6, 2, 5, 4, 5, 1, 6};
 
-        int[] histogram2 =  {3, 5, 1, 7, 5, 9};
+        int[] histogram2 =  {1,8,6,2,5,4,8,3,7};
 
         int histogram1Area = findArea(histogram1);
         System.out.println("Histogram 1 Largest Rectangular Area == "+ histogram1Area);
